@@ -1,0 +1,40 @@
+.Header {
+
+    @include header-fixed();
+
+    line-height: 100px;
+    white-space: nowrap;
+
+
+    .header_wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1600px;
+        margin: 0 auto;
+
+        .gnb {
+            &>ul {
+                display: flex;
+                gap: 60px;
+
+                &>li>a {
+                    font-size: 18px;
+                    color: $white-color;
+                }
+            }
+        }
+
+        .util_area a {
+            color: $white-color;
+            font-size: 28px;
+            font-weight: 800;
+
+            .feather {
+                width: 36px;
+                height: 36px;
+                margin: 0 16px 0 0;
+                vertical-align: middle;
+            }
+        }
+    }
+}

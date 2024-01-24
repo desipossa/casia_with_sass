@@ -1,0 +1,56 @@
+@mixin inner {
+    .inner {
+        max-width: $default-size;
+        margin: 0 auto;
+        padding: $default-padding;
+    }
+}
+
+@mixin header-fixed($f: fixed) {
+    position: $f;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+@mixin default-section {
+    padding: $default-section-padding;
+}
+
+@mixin button {
+    background: transparent;
+    border: none;
+    border: 0;
+}
+
+@mixin background ($img: null) {
+    background: url(../images/#{$img}) no-repeat center center/cover;
+}
+
+@mixin center-position ($z: 999) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: $default-size;
+    width: 100%;
+    padding: $default-padding;
+    z-index: $z;
+}
+
+@mixin txt-shadow () {
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+@mixin responsive-pc {
+    @media (max-width : $default-size) {
+        @content;
+    }
+}
+
+@mixin responsive-tablet {
+    @media (max-width : $resposive-tablet-size) {
+        @content;
+    }
+}
