@@ -2,8 +2,9 @@
     @include default-section;
     @include inner;
 
+    padding: 200px 0 400px 0;
+
     background: url(../images/bg_main2.jpg) no-repeat left bottom/cover;
-    height: 100vh;
 
     h2 {
         margin: 0 0 40px 0;
