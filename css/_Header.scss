@@ -2,15 +2,27 @@
 
     @include header-fixed();
 
+    .mbtn {
+        display: none;
+    }
+
     line-height: 100px;
     white-space: nowrap;
 
+    &.on {
+        background: rgba($color: $dark-color, $alpha: 0.9);
+    }
 
     .header_wrap {
         display: flex;
         justify-content: space-between;
         max-width: 1600px;
         margin: 0 auto;
+        padding: $default-padding;
+
+        h1 {
+            flex: 0 0 42px;
+        }
 
         .gnb {
             &>ul {
@@ -18,6 +30,7 @@
                 gap: 60px;
 
                 &>li>a {
+                    display: block;
                     font-size: 18px;
                     color: $white-color;
                 }
@@ -35,6 +48,75 @@
                 margin: 0 16px 0 0;
                 vertical-align: middle;
             }
+        }
+
+        @include responsive-pc {
+            .util_area {
+                display: none;
+            }
+        }
+
+        @include responsive-tablet {
+
+            .mbtn {
+                display: block;
+                border: none;
+                background: transparent;
+
+                .feather {
+                    position: fixed;
+                    top: 30px;
+                    right: 16px;
+                    z-index: 1000;
+
+                    color: $white-color;
+                    background: $dark-color;
+                    padding: 8px;
+                    box-sizing: content-box;
+                }
+            }
+
+
+            .gnb {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: calc(100% - $default-gap * 4);
+                height: 100vh;
+                background: $primari-color;
+
+                padding: 150px 24px 0 24px;
+                transition: left 0.5s;
+
+                &>ul {
+                    flex-direction: column;
+                    gap: 0;
+
+                    &>li>a {
+                        line-height: 40px;
+                        border-bottom: 1px solid rgba($color: $white-color, $alpha: 0.5);
+                    }
+                }
+            }
+
+        }
+
+        @include responsive-mobile {
+            .gnb {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &.active {
+        h1 {
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .gnb {
+            left: 0;
         }
     }
 }

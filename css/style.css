@@ -115,21 +115,32 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 1000;
   line-height: 100px;
   white-space: nowrap;
+}
+.Header .mbtn {
+  display: none;
+}
+.Header.on {
+  background: rgba(51, 51, 51, 0.9);
 }
 .Header .header_wrap {
   display: flex;
   justify-content: space-between;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0 16px;
+}
+.Header .header_wrap h1 {
+  flex: 0 0 42px;
 }
 .Header .header_wrap .gnb > ul {
   display: flex;
   gap: 60px;
 }
 .Header .header_wrap .gnb > ul > li > a {
+  display: block;
   font-size: 18px;
   color: #ffffff;
 }
@@ -143,6 +154,58 @@ textarea {
   height: 36px;
   margin: 0 16px 0 0;
   vertical-align: middle;
+}
+@media (max-width: 1400px) {
+  .Header .header_wrap .util_area {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .Header .header_wrap .mbtn {
+    display: block;
+    border: none;
+    background: transparent;
+  }
+  .Header .header_wrap .mbtn .feather {
+    position: fixed;
+    top: 30px;
+    right: 16px;
+    z-index: 1000;
+    color: #ffffff;
+    background: #333333;
+    padding: 8px;
+    box-sizing: content-box;
+  }
+  .Header .header_wrap .gnb {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: calc(100% - 120px);
+    height: 100vh;
+    background: #866750;
+    padding: 150px 24px 0 24px;
+    transition: left 0.5s;
+  }
+  .Header .header_wrap .gnb > ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .Header .header_wrap .gnb > ul > li > a {
+    line-height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+@media (max-width: 500px) {
+  .Header .header_wrap .gnb {
+    width: 100%;
+  }
+}
+.Header.active h1 {
+  position: fixed;
+  z-index: 1000;
+}
+.Header.active .gnb {
+  left: 0;
 }
 
 .MainVisual {
@@ -274,6 +337,16 @@ textarea {
 }
 .MainVisual:hover .arrows {
   max-width: 1400px;
+}
+@media (max-width: 768px) {
+  .MainVisual .slg h2 span {
+    font-size: 36px;
+  }
+}
+@media (max-width: 500px) {
+  .MainVisual .slg h2 span {
+    font-size: 4vw;
+  }
 }
 
 .MainContent {
@@ -418,6 +491,15 @@ textarea {
   line-height: 20px;
   word-break: keep-all;
 }
+@media (max-width: 500px) {
+  .MainEvent h2 span {
+    font-size: 6vw;
+    line-height: 1.2;
+  }
+  .MainEvent .itm h3 {
+    font-size: 4vw;
+  }
+}
 
 .Footer {
   padding: 80px 0;
@@ -443,7 +525,7 @@ textarea {
   content: "";
   position: absolute;
   top: 7px;
-  left: -16px;
+  left: -15px;
   width: 2px;
   height: 2px;
   background: #333333;
@@ -451,4 +533,13 @@ textarea {
 .Footer .copy {
   font-size: 14px;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .Footer ul.ft_list,
+  .Footer ul.fb_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 24px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

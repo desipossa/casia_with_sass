@@ -58,4 +58,19 @@
             }
         }
     }
+
+    @include responsive-mobile {
+        h2 {
+            span {
+                font-size: 6vw;
+                line-height: 1.2;
+            }
+        }
+
+        .itm {
+            h3 {
+                font-size: 4vw;
+            }
+        }
+    }
 }

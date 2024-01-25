@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1000;
 }
 
 @mixin default-section {
@@ -60,6 +60,7 @@
     z-index: $z;
 }
 
+
 @mixin txt-shadow () {
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
@@ -72,6 +73,12 @@
 
 @mixin responsive-tablet {
     @media (max-width : $resposive-tablet-size) {
+        @content;
+    }
+}
+
+@mixin responsive-mobile {
+    @media (max-width : $resposive-mobile-size) {
         @content;
     }
 }

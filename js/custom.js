@@ -14,5 +14,16 @@ $(function () {
         $('.main_visual_slide').slick('slickNext');
     });
 
+    $(window).on('scroll', () => {
+        let SCT = $(window).scrollTop();
+        SCT > 0
+            ? $('.Header').addClass('on')
+            : $('.Header').removeClass('on');
+    });
+
+    $('.mbtn').on('click', () => {
+        $('.Header').toggleClass('active');
+    })
+
 
 })

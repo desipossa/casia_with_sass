@@ -126,6 +126,26 @@
         }
     }
 
+    @include responsive-tablet {
+        .slg {
+            h2 {
+                span {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    @include responsive-mobile {
+        .slg {
+            h2 {
+                span {
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+
 
 
 }

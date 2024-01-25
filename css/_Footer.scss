@@ -17,7 +17,7 @@
                 content: "";
                 position: absolute;
                 top: 7px;
-                left: -($default-gap * 1) / 2 - 1;
+                left: calc(-1 * ($default-gap * 1) / 2);
                 width: 2px;
                 height: 2px;
                 background: $dark-color;
@@ -28,5 +28,17 @@
     .copy {
         font-size: 14px;
         text-align: center;
+    }
+
+    @include responsive-tablet {
+
+        ul.ft_list,
+        ul.fb_list {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            margin: 0 0 24px 0;
+        }
     }
 }
