@@ -16,6 +16,27 @@
 
 @mixin default-section {
     padding: $default-section-padding;
+
+    .tit {
+        max-width: $default-size;
+        padding: $default-padding;
+
+        margin: 0 auto 40px auto;
+
+        h2 {
+            font-size: 16px;
+            text-align: center;
+            margin: 0 0 8px 0;
+        }
+
+        p {
+            font-size: 40px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            color: $primari-color;
+        }
+    }
 }
 
 @mixin button {

@@ -278,4 +278,143 @@ textarea {
 
 .MainContent {
   padding: 100px 0;
+}
+.MainContent .tit {
+  max-width: 1400px;
+  padding: 0 16px;
+  margin: 0 auto 40px auto;
+}
+.MainContent .tit h2 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+.MainContent .tit p {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #866750;
+}
+.MainContent .inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.MainContent .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 1400px) {
+  .MainContent .content {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .MainContent .content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.MainContent .content .itm figure {
+  position: relative;
+  margin: 0 0 16px 0;
+}
+.MainContent .content .itm figure::after {
+  content: attr(data-txt);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #866750;
+  color: #ffffff;
+  line-height: 24px;
+  text-align: center;
+}
+.MainContent .content .itm figcaption strong {
+  display: block;
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.MainContent .content .itm figcaption p {
+  text-align: center;
+}
+
+.MainEvent {
+  padding: 100px 0;
+  background: url(../images/bg_main2.jpg) no-repeat left bottom/cover;
+  height: 100vh;
+}
+.MainEvent .tit {
+  max-width: 1400px;
+  padding: 0 16px;
+  margin: 0 auto 40px auto;
+}
+.MainEvent .tit h2 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+.MainEvent .tit p {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #866750;
+}
+.MainEvent .inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.MainEvent h2 {
+  margin: 0 0 40px 0;
+}
+.MainEvent h2 span {
+  display: block;
+  font-size: 40px;
+  font-weight: 100;
+  color: #ffffff;
+  line-height: 44px;
+  text-align: center;
+}
+.MainEvent .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 1400px) {
+  .MainEvent .content {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .MainEvent .content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.MainEvent .content .itm {
+  background: rgba(134, 103, 80, 0.75);
+  padding: 48px;
+  border-radius: 32px;
+}
+.MainEvent .content .itm h3 {
+  margin: 0 auto;
+  max-width: 240px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: wrap;
+  word-break: keep-all;
+  text-align: center;
+  line-height: 28px;
+  min-height: 70px;
+}
+.MainEvent .content .itm p {
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  word-break: keep-all;
 }/*# sourceMappingURL=style.css.map */

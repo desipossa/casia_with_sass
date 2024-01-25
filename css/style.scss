@@ -1,10 +1,13 @@
-@import 'variables';
-@import 'mixins';
-
 @import 'reset';
 @import 'font';
 
+@import 'variables';
+@import 'mixins';
 
 @import 'Header';
+
 @import 'MainVisual';
 @import 'MainContent';
+@import 'MainEvent';
+
+@import 'Footer';
