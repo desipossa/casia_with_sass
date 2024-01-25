@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="get" name="formName" onsubmit="return checkForm()">
+        <label><span>name</span><input type="text" name="userName"></label>
+        <button>SUBMIT</button>
+    </form>
+    <script>
+        function checkForm() {
+            alert('ㅋㅋㅋ'); // 경고 메세지를 뛰우고
+            return false; // 이벤트의 실행(submit : 폼데이터의 전송)을 취소함.
+        }
+    </script>
+</body>
+
+</html>

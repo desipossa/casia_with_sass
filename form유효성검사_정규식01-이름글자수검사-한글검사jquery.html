@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <!-- https://ldgeao99-developer.tistory.com/511 참조 -->
+
+    <form action="" method="get" name="formName" onsubmit="return checkForm()">
+        <label for="userName">name</label> <input type="text" name="userName" id="userName">
+        <button>SUBMIT</button>
+    </form>
+    <script>
+        function checkForm() {
+            const checkKor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            //아래의 조건을 만족할 시 폼 전송해주기
+            if ($('input[id="userName"]').val().length < 3) {
+                alert('이름은 3자 이상 입력하세요.'); // 경고 메세지를 뛰우고
+                $('input[id="userName"]').val(''); //input의 값을 비움.
+                $('input[id="userName"]').focus(); // 비운 박스에 커스를 가져다 놓음.
+                return false; // 이벤트의 실행(submit : 폼데이터의 전송)을 취소함.
+            }
+
+            if (!checkKor.test($('input[id="userName"]').val())) {
+                // 부정연산자+변수값.test함수(입력값) --> 입력값이 조건에 맞지 않으면.
+                alert('한글로입력해주세요');
+                $('input[id="userName"]').val(''); //input의 값을 비움.
+                $('input[id="userName"]').focus(); // 비운 박스에 커스를 가져다 놓음.
+                return false;
+            }
+            return
+        }
+    </script>
+</body>
+
+</html>
